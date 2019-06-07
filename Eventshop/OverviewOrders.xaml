@@ -1,0 +1,78 @@
+﻿<Window x:Class="Eventshop.OverviewOrders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Eventshop"
+        mc:Ignorable="d"
+        Title="OverviewOrders" Height="450" Width="800">
+  <Grid ScrollViewer.CanContentScroll="True">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="80"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Label Grid.Row="0" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">Meine Bestellungen</Label>
+      
+    <TabControl Grid.Row="1" VerticalAlignment="Top" >
+      <TabItem Header="Kommende Events">
+        <DataGrid Grid.Row="1" Name="dgOrders" AutoGenerateColumns="False" CanUserSortColumns="True">
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="Datum" Binding="{Binding Event.Date, StringFormat={}{0:dd.MM.yyyy}}" Width="*" IsReadOnly="True" />
+            <DataGridTextColumn Header="Name" Binding="{Binding Event.Name}" Width="*" IsReadOnly="True" />
+            <DataGridTextColumn Header="Ort" Binding="{Binding Event.Place}" Width="*" IsReadOnly="True" />
+            <DataGridTextColumn Header="Anzahl" Binding="{Binding CountPerson}" Width="*" IsReadOnly="True" />
+            <DataGridTextColumn Header="Preis pro Person" Binding="{Binding Event.PricePerPerson, StringFormat={}{0} Fr}"  Width="*" IsReadOnly="True" />
+            <DataGridTextColumn Header="Preis Total" Binding="{Binding Price, StringFormat={}{0} Fr}" Width="*" IsReadOnly="True" />
+            <DataGridTemplateColumn Header="Aktionen" Width="*">
+              <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                  <Grid>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="Auto" />
+                      <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" CommandParameter="{Binding ID}">Bestellen</Button>
+                    <Button Grid.Row="1" CommandParameter="{Binding ID}">Stornieren</Button>
+                  </Grid>
+                </DataTemplate>
+              </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+          </DataGrid.Columns>
+        </DataGrid>
+      </TabItem>
+      <TabItem Header="Besuchte Events">
+        <DataGrid Grid.Row="1" Name="dgVisited" AutoGenerateColumns="False" CanUserSortColumns="True">
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="Datum" Binding="{Binding Event.Date, StringFormat={}{0:dd.MM.yyyy}}" Width="*" IsReadOnly="True" />
+            <DataGridTextColumn Header="Name" Binding="{Binding Event.Name}" Width="*" IsReadOnly="True" />
+            <DataGridTextColumn Header="Ort" Binding="{Binding Event.Place}" Width="*" IsReadOnly="True" />
+            <DataGridTextColumn Header="Anzahl" Binding="{Binding CountPerson}" Width="*" IsReadOnly="True" />
+            <DataGridTextColumn Header="Preis pro Person" Binding="{Binding Event.PricePerPerson, StringFormat={}{0} Fr}"  Width="*" IsReadOnly="True" />
+            <DataGridTextColumn Header="Preis Total" Binding="{Binding Price, StringFormat={}{0} Fr}" Width="*" IsReadOnly="True" />
+            <DataGridTemplateColumn Header="Bewerten" Width="*">
+              <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                  <Grid>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="*" />
+                      <ColumnDefinition Width="*" />
+                      <ColumnDefinition Width="*" />
+                      <ColumnDefinition Width="*" />
+                      <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" CommandParameter="{Binding ID}" Content="★" />
+                    <Button Grid.Column="1" CommandParameter="{Binding ID}" Content="★" />
+                    <Button Grid.Column="2" CommandParameter="{Binding ID}" Content="★" />
+                    <Button Grid.Column="3" CommandParameter="{Binding ID}" Content="☆" />
+                    <Button Grid.Column="4" CommandParameter="{Binding ID}" Content="☆" />
+                  </Grid>
+                </DataTemplate>
+              </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+          </DataGrid.Columns>
+        </DataGrid>
+      </TabItem>
+    </TabControl>
+
+  </Grid>
+</Window>

@@ -63,12 +63,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Event.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Orders.cs" />
     <Compile Include="OverviewOffers.xaml.cs">
       <DependentUpon>OverviewOffers.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="OverviewOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OverviewOrders.xaml.cs">
+      <DependentUpon>OverviewOrders.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -92,7 +103,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

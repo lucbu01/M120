@@ -15,5 +15,7 @@ namespace Eventshop {
     public string Email { get; set; }
     public string Phone { get; set; }
     public Event Event { get; set; }
+    public double Price { get { return Event.PricePerPerson * CountPerson; } }
+    public int Rating { get; set; } = -1;
   }
 }

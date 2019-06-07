@@ -17,7 +17,7 @@
         <ColumnDefinition Width="*" />
       </Grid.ColumnDefinitions>
       <Label FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">Eventshop</Label>
-      <Button Grid.Column="1" VerticalAlignment="Center" Padding="20,10" HorizontalAlignment="Right" Margin="0,0,30,0">Meine Bestellungen</Button>
+      <Button Grid.Column="1" VerticalAlignment="Center" Padding="20,10" HorizontalAlignment="Right" Margin="0,0,30,0" Click="Button_Click">Meine Bestellungen</Button>
     </Grid>
     <DataGrid Grid.Row="1" Name="dgOffers" AutoGenerateColumns="False" CanUserSortColumns="True">
       <DataGrid.Columns>

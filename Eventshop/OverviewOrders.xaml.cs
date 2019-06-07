@@ -10,21 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Eventshop {
   /// <summary>
-  /// Interaktionslogik für MainWindow.xaml
+  /// Interaktionslogik für OverviewOrders.xaml
   /// </summary>
-  public partial class MainWindow : Window {
-    public MainWindow() {
+  public partial class OverviewOrders : Window {
+    public OverviewOrders() {
       InitializeComponent();
-      dgOffers.ItemsSource = Events.get();
-    }
-
-    private void Button_Click(object sender, RoutedEventArgs e) {
-      new OverviewOrders().ShowDialog();
+      dgOrders.ItemsSource = Orders.get();
+      dgVisited.ItemsSource = Orders.getPast();
     }
   }
 }
