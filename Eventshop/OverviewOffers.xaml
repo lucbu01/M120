@@ -19,21 +19,25 @@
       <Label FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">Eventshop</Label>
       <Button Grid.Column="1" VerticalAlignment="Center" Padding="20,10" HorizontalAlignment="Right" Margin="0,0,30,0" Click="Button_Click">Meine Bestellungen</Button>
     </Grid>
-    <DataGrid Grid.Row="1" Name="dgOffers" AutoGenerateColumns="False" CanUserSortColumns="True">
-      <DataGrid.Columns>
-        <DataGridTextColumn Header="Datum" Binding="{Binding Date, StringFormat={}{0:dd.MM.yyyy}}" Width="*" IsReadOnly="True" />
-        <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" IsReadOnly="True" />
-        <DataGridTextColumn Header="Ort" Binding="{Binding Place}" Width="*" IsReadOnly="True" />
-        <DataGridTextColumn Header="Preis pro Person" Binding="{Binding PricePerPerson, StringFormat={}{0} Fr}"  Width="*" IsReadOnly="True" />
-        <DataGridTextColumn Header="Freie Plätze" Binding="{Binding FreePlaces}" Width="*" IsReadOnly="True" />
-        <DataGridTemplateColumn Header="Bestellen" Width="*">
-          <DataGridTemplateColumn.CellTemplate>
-            <DataTemplate>
-              <Button  CommandParameter="{Binding ID}">Bestellen</Button>
-            </DataTemplate>
-          </DataGridTemplateColumn.CellTemplate>
-        </DataGridTemplateColumn>
-      </DataGrid.Columns>
-    </DataGrid>
+    <ListView Grid.Row="1" Name="dgOffers">
+      <ListView.View>
+        <GridView AllowsColumnReorder="True">
+          <GridView.Columns>
+            <GridViewColumn Header="Datum" DisplayMemberBinding="{Binding Date, StringFormat={}{0:dd.MM.yyyy}}"  />
+            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" />
+            <GridViewColumn Header="Ort" DisplayMemberBinding="{Binding Place}" />
+            <GridViewColumn Header="Preis pro Person" DisplayMemberBinding="{Binding PricePerPerson, StringFormat={}{0} Fr}"  />
+            <GridViewColumn Header="Freie Plätze" DisplayMemberBinding="{Binding FreePlaces}" />
+            <GridViewColumn Header="Bestellen" >
+              <GridViewColumn.CellTemplate>
+              <DataTemplate>
+                <Button  CommandParameter="{Binding ID}">Bestellen</Button>
+              </DataTemplate>
+            </GridViewColumn.CellTemplate>
+        </GridViewColumn>
+          </GridView.Columns>
+        </GridView>
+      </ListView.View>
+    </ListView>
   </Grid>
 </Window>
