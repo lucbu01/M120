@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Eventshop"
         mc:Ignorable="d"
         Title="Event Bestellung" Height="500" Width="800"
-        MinHeight="460" MinWidth="730">
+        MinHeight="430" MinWidth="700">
+    <Viewbox>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -67,4 +68,5 @@
         <Button Name="btSave" Margin="0, 0, 140, 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35">Speichern</Button>
         <Button Name="btCancel" Margin="0, 0, 20, 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35">Abbrechen</Button>
     </Grid>
+    </Viewbox>
 </Window>
