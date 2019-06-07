@@ -1,0 +1,72 @@
+﻿<Window x:Class="Eventshop.OrderCRU"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Eventshop"
+        mc:Ignorable="d"
+        Title="Event Bestellung" Height="500" Width="800"
+        MinHeight="430" MinWidth="700">
+    <Viewbox>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Label Name="lblEvent" Margin="15, 10, 10, 10" FontSize="46" FontWeight="Bold" Grid.ColumnSpan="2">Event</Label>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Label Margin="15, 5, 5, 5" Grid.ColumnSpan="2" FontSize="26" FontWeight="Bold">Informationen zum Käufer</Label>
+                <Label Name="lblLastname" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="1">Nachname</Label>
+                <TextBox Name="txtLastname" VerticalAlignment="Center" Margin="15, 5, 20, 5" Grid.Row="1" Grid.Column="1"></TextBox>
+                <Label Name="lblFirstname" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="2">Vorname</Label>
+                <TextBox Name="txtFirstname" VerticalAlignment="Center" Margin="15, 5, 20, 5" Grid.Row="2" Grid.Column="1"></TextBox>
+                <Label Name="lblAdresse" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="3">Strasse + Nummer</Label>
+                <TextBox Name="txtAdresse" VerticalAlignment="Center" Margin="15, 5, 20, 5" Grid.Row="3" Grid.Column="1"></TextBox>
+                <Label Name="lblCity" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="4">PLZ/Ort</Label>
+                <TextBox Name="txtCity" VerticalAlignment="Center" Margin="15, 5, 20, 5" Grid.Row="4" Grid.Column="1"></TextBox>
+                <Label Name="lblEmail" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="5">Email</Label>
+                <TextBox Name="txtEmail" VerticalAlignment="Center" Margin="15, 5, 20, 5" Grid.Row="5" Grid.Column="1"></TextBox>
+                <Label Name="lblPhone" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="6">Telfeon</Label>
+                <TextBox Name="txtPhone" VerticalAlignment="Center" Margin="15, 5, 20, 5" Grid.Row="6" Grid.Column="1"></TextBox>
+
+                <Label Margin="15, 5, 5, 5" Grid.ColumnSpan="2" Grid.Column="2" FontSize="26" FontWeight="Bold">Informationen zum Event</Label>
+                <Label Name="lblDate" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="1"  Grid.Column="2">Datum</Label>
+                <Label Name="lblDateInfo" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="1" Grid.Column="3">17.02.2019</Label>
+                <Label Name="lblEventCity" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="2"  Grid.Column="2">Ort</Label>
+                <Label Name="lblEentCityInfo" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="2" Grid.Column="3">Sursee</Label>
+                <Label Name="lblPricePerPerson" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="3" Grid.Column="2">Preis pro Person</Label>
+                <Label Name="lblPricePerPersonInfo" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="3" Grid.Column="3">15Fr.</Label>
+                <Label Name="lblFreePlaces" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="4" Grid.Column="2">Freie Plätze</Label>
+                <Label Name="lblFreePlacesInfo" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="4" Grid.Column="3">150</Label>
+                <Label Name="lblNumberOfPersons" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="5" Grid.Column="2">Anzahl Personen</Label>
+                <TextBox Name="txtNumberOfPersons" VerticalAlignment="Center" Margin="15, 5, 20, 5" Grid.Row="5" Grid.Column="3">10</TextBox>
+                <Label Name="lblPrice" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="6" Grid.Column="2">Preis Total</Label>
+                <Label Name="lblPriceInfo" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="6" Grid.Column="13">150 Fr.</Label>
+            </Grid>
+            <CheckBox Name="cboAgb" Margin="15, 21, 5, 5" Grid.Row="2"></CheckBox>
+            <TextBlock Margin="35, 20, 5, 5" Grid.Row="2">Ich habe die AGBs gelesen und bin damit einverstanden</TextBlock>
+            <Button Name="btSave" Margin="0, 0, 140, 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35">Speichern</Button>
+            <Button Name="btCancel" Margin="0, 0, 20, 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35">Abbrechen</Button>
+        </Grid>
+    </Viewbox>
+</Window>
