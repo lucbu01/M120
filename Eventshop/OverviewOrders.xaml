@@ -15,7 +15,7 @@
       
     <TabControl Grid.Row="1" VerticalAlignment="Top" >
       <TabItem Header="Kommende Events">
-        <DataGrid Grid.Row="1" Name="dgOrders" AutoGenerateColumns="False" CanUserSortColumns="True">
+        <DataGrid Grid.Row="1" Name="dgOrders" AutoGenerateColumns="False" CanUserSortColumns="True"  CanUserAddRows="False" CanUserDeleteRows="False">
           <DataGrid.Columns>
             <DataGridTextColumn Header="Datum" Binding="{Binding Event.Date, StringFormat={}{0:dd.MM.yyyy}}" Width="*" IsReadOnly="True" />
             <DataGridTextColumn Header="Name" Binding="{Binding Event.Name}" Width="*" IsReadOnly="True" />
@@ -41,7 +41,7 @@
         </DataGrid>
       </TabItem>
       <TabItem Header="Besuchte Events">
-        <DataGrid Grid.Row="1" Name="dgVisited" AutoGenerateColumns="False" CanUserSortColumns="True">
+        <DataGrid Grid.Row="1" Name="dgVisited" AutoGenerateColumns="False" CanUserSortColumns="True" CanUserAddRows="False" CanUserDeleteRows="False">
           <DataGrid.Columns>
             <DataGridTextColumn Header="Datum" Binding="{Binding Event.Date, StringFormat={}{0:dd.MM.yyyy}}" Width="*" IsReadOnly="True" />
             <DataGridTextColumn Header="Name" Binding="{Binding Event.Name}" Width="*" IsReadOnly="True" />
