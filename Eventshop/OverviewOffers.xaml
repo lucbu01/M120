@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Eventshop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" MinWidth="500" MinHeight="400">
+        Title="Angebote - Eventshop" Height="450" Width="800" MinWidth="500" MinHeight="400">
   <Grid ScrollViewer.CanContentScroll="True">
     <Grid.RowDefinitions>
       <RowDefinition Height="80"/>
