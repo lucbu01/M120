@@ -53,7 +53,7 @@
             <Label Name="lblDate" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="1"  Grid.Column="2">Datum</Label>
             <Label Name="lblDateInfo" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="1" Grid.Column="3">17.02.2019</Label>
             <Label Name="lblEventCity" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="2"  Grid.Column="2">Ort</Label>
-            <Label Name="lblEentCityInfo" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="2" Grid.Column="3">Sursee</Label>
+            <Label Name="lblEventCityInfo" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="2" Grid.Column="3">Sursee</Label>
             <Label Name="lblPricePerPerson" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="3" Grid.Column="2">Preis pro Person</Label>
             <Label Name="lblPricePerPersonInfo" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="3" Grid.Column="3">15Fr.</Label>
             <Label Name="lblFreePlaces" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="4" Grid.Column="2">Freie Plätze</Label>
@@ -65,7 +65,7 @@
         </Grid>
         <CheckBox Name="cboAgb" Margin="15, 21, 5, 5" Grid.Row="2"></CheckBox>
         <TextBlock Margin="35, 20, 5, 5" Grid.Row="2">Ich habe die AGBs gelesen und bin damit einverstanden</TextBlock>
-        <Button Name="btSave" Margin="0, 0, 140, 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35">Speichern</Button>
-        <Button Name="btCancel" Margin="0, 0, 20, 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35">Abbrechen</Button>
+        <Button Name="btSave" Margin="0, 0, 140, 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35" Click="close">Speichern</Button>
+        <Button Name="btCancel" Margin="0, 0, 20, 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35" Click="close">Abbrechen</Button>
     </Grid>
 </Window>

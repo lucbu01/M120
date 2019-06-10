@@ -23,5 +23,10 @@ namespace Eventshop
         {
             InitializeComponent();
         }
+
+        private void close(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

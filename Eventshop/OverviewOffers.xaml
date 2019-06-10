@@ -29,7 +29,7 @@
         <DataGridTemplateColumn Header="Bestellen" Width="*">
           <DataGridTemplateColumn.CellTemplate>
             <DataTemplate>
-              <Button  CommandParameter="{Binding ID}">Bestellen</Button>
+                <Button  CommandParameter="{Binding ID}" Click="Button_Click_Order">Bestellen</Button>
             </DataTemplate>
           </DataGridTemplateColumn.CellTemplate>
         </DataGridTemplateColumn>

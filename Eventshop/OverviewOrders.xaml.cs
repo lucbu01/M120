@@ -22,5 +22,10 @@ namespace Eventshop {
       dgOrders.ItemsSource = Orders.get();
       dgVisited.ItemsSource = Orders.getPast();
     }
+
+    private void Button_Click_Order(object sender, RoutedEventArgs e)
+    {
+        new OrderCRU().ShowDialog();
+    }
   }
 }

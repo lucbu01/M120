@@ -26,5 +26,10 @@ namespace Eventshop {
     private void Button_Click(object sender, RoutedEventArgs e) {
       new OverviewOrders().ShowDialog();
     }
+
+    private void Button_Click_Order(object sender, RoutedEventArgs e)
+    {
+        new OrderCRU().ShowDialog();
+    }
   }
 }
