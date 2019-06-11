@@ -31,7 +31,7 @@
                       <RowDefinition Height="Auto" />
                       <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <Button Grid.Row="0" CommandParameter="{Binding ID}" Click="Button_Click_Order">Bestellen</Button>
+                    <Button Grid.Row="0" CommandParameter="{Binding ID}" Click="Button_Click_Order">Bearbeiten</Button>
                     <Button Grid.Row="1" CommandParameter="{Binding ID}">Stornieren</Button>
                   </Grid>
                 </DataTemplate>

@@ -12,21 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Eventshop
-{
-    /// <summary>
-    /// Interaktionslogik für OrderCRU.xaml
-    /// </summary>
-    public partial class OrderCRU : Window
-    {
-        public OrderCRU()
-        {
-            InitializeComponent();
-        }
-
-        private void close(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+namespace Eventshop {
+  /// <summary>
+  /// Interaktionslogik für OrderCRU.xaml
+  /// </summary>
+  public partial class OrderCRU : Window {
+    public OrderCRU() {
+      InitializeComponent();
     }
+
+    private void close(object sender, RoutedEventArgs e) {
+      this.Close();
+    }
+
+    private void CboAgb_CheckChanged(object sender, RoutedEventArgs e) {
+      btnSave.IsEnabled = cboAgb.IsChecked == true;
+    }
+  }
 }

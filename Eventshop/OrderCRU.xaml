@@ -5,9 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Eventshop"
         mc:Ignorable="d"
-        Title="Event Bestellung" Height="500" Width="800"
-        MinHeight="500" MinWidth="800"
-        MaxHeight="500" MaxWidth="800">
+        Title="Event Bestellung" Height="500" Width="800" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -63,9 +61,8 @@
             <Label Name="lblPrice" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="6" Grid.Column="2">Preis Total</Label>
             <Label Name="lblPriceInfo" VerticalAlignment="Center" Margin="15, 5, 5, 5" Grid.Row="6" Grid.Column="13">150 Fr.</Label>
         </Grid>
-        <CheckBox Name="cboAgb" Margin="15, 21, 5, 5" Grid.Row="2"></CheckBox>
-        <TextBlock Margin="35, 20, 5, 5" Grid.Row="2">Ich habe die AGBs gelesen und bin damit einverstanden</TextBlock>
-        <Button Name="btSave" Margin="0, 0, 140, 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35" Click="close">Speichern</Button>
-        <Button Name="btCancel" Margin="0, 0, 20, 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35" Click="close">Abbrechen</Button>
+        <CheckBox Checked="CboAgb_CheckChanged" Unchecked="CboAgb_CheckChanged" Name="cboAgb" Margin="15, 21, 5, 5" Grid.Row="2">Ich habe die AGBs gelesen und bin damit einverstanden</CheckBox>
+        <Button IsDefault="True" Name="btnSave" Margin="0, 0, 140, 0" IsEnabled="False" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35" Click="close">Speichern</Button>
+        <Button IsCancel="True" Name="btnCancel" Margin="0, 0, 20, 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="2" Width="100" Height="35" Click="close">Abbrechen</Button>
     </Grid>
 </Window>
